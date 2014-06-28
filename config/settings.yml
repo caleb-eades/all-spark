@@ -1,0 +1,2 @@
+environment : 'development'
+configName : 'config/all-spark-local.json'

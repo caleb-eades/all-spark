@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+
+if(File.exists?('./puma.pid'))
+    pid = File.read("./puma.pid")
+    pid.chomp!
+    puts("Stopping process: #{pid}")
+    Process.kill("KILL", pid.to_i)
+end

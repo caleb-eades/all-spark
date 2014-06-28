@@ -1,0 +1,62 @@
+#!/usr/local/bin/ruby
+
+require 'active_record'
+require 'json'
+
+class Migrate
+    def initialize()
+        config = JSON::load(File.open(ARGV[0]))
+        ActiveRecord::Base.establish_connection(
+            :adapter => config['adapter'],
+            :host => config['host'],
+            :port => config['port'],
+            :username => config['username'],
+            :password => config['password'],
+            :database => config['database']
+        )
+    end
+
+    def create()
+        begin
+            ActiveRecord::Migration.create_table :portions do |table|
+                table.string :name
+            end
+            puts 'portions : Created'
+        rescue => exception
+            if(exception.inspect =~ /already exists/)
+                puts 'portions : already exists'
+            else
+                puts 'portions :' + exception.inspect
+            end
+        end
+
+    end
+
+    def delete()
+        begin
+            ActiveRecord::Migration.drop_table :portions
+            puts 'portions : Deleted'
+        rescue => exception
+            if(exception.inspect =~ /Unknown table/)
+                puts 'portions : does not exist'
+            else
+                puts 'portions :' + exception.inspect
+            end
+        end
+
+    end
+
+end
+if(ARGV.length != 2)
+    puts "Usage: #{$0} <config.json> [create|delete|reset]"
+    exit -1
+end
+case ARGV[1]
+    when "create"
+        Migrate.new.create
+    when "delete"
+        Migrate.new.delete
+    when "reset"
+        Migrate.new.delete
+        Migrate.new.create
+end

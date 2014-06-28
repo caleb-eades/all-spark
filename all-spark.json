@@ -1,0 +1,52 @@
+{
+    "component"   : "RaptorEngine",
+    "settings"    : {
+        "name"      : "all-spark",
+        "port"      : "4567",
+        "namespace" : "com.foursevengames.allspark",
+        "location"  : "dev/personal",
+        "databases" : [
+            {
+                "configName" : "all-spark-local",
+                "database"   : "all-spark",
+                "username"   : "root",
+                "password"   : "jetstream",
+                "host"       : "127.0.0.1",
+                "port"       : "3306",
+                "adapter"    : "mysql2"
+            }
+        ],
+        "views"     : [],
+        "entities"  : [
+            {
+                "name": "Portion",
+                "connections": [
+                    {
+                        "type": "has_many",
+                        "name": "paragraph"
+                    }
+                ],
+                "members": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    }
+                ]
+            }
+        ]
+    },
+    "units"       : [
+        {
+            "type"     : "Ruby/Project/Sinatra"
+        },
+        {
+            "type"     : "Ruby/DataModel/ActiveRecordModel"
+        },
+        {
+            "type"     : "Ruby/DataModel/ActiveRecordMigrate"
+        },
+        {
+            "type"     : "Ruby/View/RestRoute"
+        }
+    ]
+}

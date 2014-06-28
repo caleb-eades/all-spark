@@ -1,0 +1,26 @@
+#!/usr/bin/ruby
+require 'json'
+
+path = File.dirname($0)
+
+# Find out if already running
+if(File.exists?("./puma.pid"))
+    pid = File.read("./puma.pid")
+    pid.chomp!
+    isRunning = `ps -aux | grep '#{pid}.*pum[a]'`
+    isRunning.chomp!
+
+    if(isRunning.length > 0)
+        puts("Found another solution running...")
+
+        puts("Stopping process: #{pid}")
+        Process.kill("KILL", pid.to_i)
+
+        puts
+    end
+end
+
+command = "/usr/local/bin/puma -C ./config/puma.config"
+puts("Starting solution: #{command}")
+system(command)
+
