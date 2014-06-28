@@ -23,12 +23,27 @@
                 "connections": [
                     {
                         "type": "has_many",
-                        "name": "paragraph"
+                        "name": "verse"
                     }
                 ],
                 "members": [
                     {
                         "name": "name",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "name": "Verse",
+                "connections": [
+                    {
+                        "type": "belongs_to",
+                        "name": "portion"
+                    }
+                ],
+                "members": [
+                    {
+                        "name": "verse",
                         "type": "string"
                     }
                 ]

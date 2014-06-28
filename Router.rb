@@ -70,4 +70,46 @@ post '/rest/model/portions/filter' do
     PortionController.filter(data)
 end
 
+post '/rest/model/verses/create' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    VerseController.create(data)
+end
+
+post '/rest/model/verses/read' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    VerseController.read(data)
+end
+
+post '/rest/model/verses/update' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    VerseController.update(data)
+end
+
+post '/rest/model/verses/delete' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    VerseController.delete(data)
+end
+
+post '/rest/model/verses/list' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    VerseController.list(data)
+end
+
+post '/rest/model/verses/filter' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    VerseController.filter(data)
+end
+
 # Rest Routes (POST)

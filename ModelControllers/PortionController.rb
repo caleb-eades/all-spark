@@ -10,7 +10,7 @@ class PortionController
     def self.create(data)
         portion = Portion.create( :name => data['name'] )
 
-        portionJson = { :id => portion.id, :name => portion.name, :paragraph => ParagraphController.recurse(portion.id, Hash.new) }
+        portionJson = { :id => portion.id, :name => portion.name, :verse => VerseController.recurse(portion.id, Hash.new) }
 
         return portionJson.to_json
     end
@@ -18,7 +18,7 @@ class PortionController
     def self.read(data)
         portion = Portion.find(data['id'])
 
-        portionJson = { :id => portion.id, :name => portion.name, :paragraph => ParagraphController.recurse(portion.id, Hash.new) }
+        portionJson = { :id => portion.id, :name => portion.name, :verse => VerseController.recurse(portion.id, Hash.new) }
 
         return portionJson.to_json
 
@@ -27,7 +27,7 @@ class PortionController
     def self.update(data)
         portion = Portion.update( data['id'], :name => data['name'] )
 
-        portionJson = { :id => portion.id, :name => portion.name, :paragraph => ParagraphController.recurse(portion.id, Hash.new) }
+        portionJson = { :id => portion.id, :name => portion.name, :verse => VerseController.recurse(portion.id, Hash.new) }
 
         return portionJson.to_json
 
@@ -37,7 +37,7 @@ class PortionController
         portion = Portion.find(data['id'])
         portion.destroy
 
-        portionJson = { :id => portion.id, :name => portion.name, :paragraph => ParagraphController.recurse(portion.id, Hash.new) }
+        portionJson = { :id => portion.id, :name => portion.name, :verse => VerseController.recurse(portion.id, Hash.new) }
 
         return portionJson.to_json
 
@@ -48,7 +48,7 @@ class PortionController
 
         Array portionJson = Array.new
         portions.each do |portion|
-            portionJson.push({ :id => portion.id, :name => portion.name, :paragraph => ParagraphController.recurse(portion.id, Hash.new) })
+            portionJson.push({ :id => portion.id, :name => portion.name, :verse => VerseController.recurse(portion.id, Hash.new) })
         end
 
         return portionJson.to_json
@@ -80,7 +80,7 @@ class PortionController
 
         Array portionJson = Array.new
         portions.each do |portion|
-            portionJson.push({ :id => portion.id, :name => portion.name, :paragraph => ParagraphController.recurse(portion.id, data) })
+            portionJson.push({ :id => portion.id, :name => portion.name, :verse => VerseController.recurse(portion.id, data) })
         end
 
         portionContainer = { :total => count, :portions => portionJson }

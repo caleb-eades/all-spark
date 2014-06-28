@@ -1,5 +1,5 @@
 require 'active_record'
 
 class Portion < ActiveRecord::Base
-    has_many :paragraph, dependent: :destroy
+    has_many :verse, dependent: :destroy
 end
