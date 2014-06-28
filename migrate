@@ -19,7 +19,7 @@ class Migrate
     def create()
         begin
             ActiveRecord::Migration.create_table :portions do |table|
-                table.string :name
+                table.string :range
             end
             puts 'portions : Created'
         rescue => exception

@@ -28,7 +28,7 @@
                 ],
                 "members": [
                     {
-                        "name": "name",
+                        "name": "range",
                         "type": "string"
                     }
                 ]
