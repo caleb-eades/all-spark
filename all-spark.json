@@ -16,6 +16,15 @@
                 "adapter"    : "postgresql"
             },
             {
+                "configName" : "all-spark-aws",
+                "database"   : "allspark",
+                "username"   : "root",
+                "password"   : "jetstream",
+                "host"       : "",
+                "port"       : "3306",
+                "adapter"    : "mysql2"
+            },
+            {
                 "configName" : "all-spark-local",
                 "database"   : "all-spark",
                 "username"   : "root",
