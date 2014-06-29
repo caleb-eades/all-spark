@@ -7,15 +7,6 @@
         "location"  : "dev/personal",
         "databases" : [
             {
-                "configName" : "all-spark-local",
-                "database"   : "all-spark",
-                "username"   : "root",
-                "password"   : "jetstream",
-                "host"       : "127.0.0.1",
-                "port"       : "3306",
-                "adapter"    : "mysql2"
-            },
-            {
                 "configName" : "all-spark-heroku",
                 "database"   : "df087iql8jo4ef",
                 "username"   : "chabzzehyndeiy",
@@ -23,6 +14,15 @@
                 "host"       : "ec2-54-225-101-124.compute-1.amazonaws.com",
                 "port"       : "5432",
                 "adapter"    : "postgresql"
+            },
+            {
+                "configName" : "all-spark-local",
+                "database"   : "all-spark",
+                "username"   : "root",
+                "password"   : "jetstream",
+                "host"       : "127.0.0.1",
+                "port"       : "3306",
+                "adapter"    : "mysql2"
             }
         ],
         "views"     : [],
