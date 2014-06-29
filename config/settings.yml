@@ -1,2 +1,2 @@
 environment : 'development'
-configName : 'config/all-spark-heroku.json'
+configName : 'config/all-spark-aws.json'

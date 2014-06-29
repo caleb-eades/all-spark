@@ -1,0 +1,8 @@
+{
+  "database": "allspark",
+  "username": "root",
+  "password": "jetstream",
+  "host": "dailyaliyah.ccxx3nivhm3v.us-west-2.rds.amazonaws.com",
+  "port": "3306",
+  "adapter": "mysql2"
+}
