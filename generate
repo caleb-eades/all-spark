@@ -1,4 +1,4 @@
 #!/bin/bash
 
 raptor all-spark.json
-checkout config.ru
+git checkout config.ru
