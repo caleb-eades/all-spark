@@ -16,6 +16,11 @@ Dir["./ModelControllers/*.rb"].sort.each do |file|
     require file
 end
 
+Dir["./CustomControllers/*.rb"].sort.each do |file| 
+    file.sub!("\.rb","");
+    require file
+end
+
 config = JSON::load(File.open(settings.configName))
 
 # HTML static routes (GET)
@@ -30,11 +35,16 @@ ActiveRecord::Base.establish_connection(
 )
 
 # Model REST routes (POST)
-post '/rest/logic/portion/today' do
-#    request.body.rewind
-#    data = JSON.parse request.body.read
-#    content_type :json
-#    PortionController.create(data)
-    return "Hello world"
+post '/rest/portions/today' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    CustomController.today(data)
 end
 
+post '/rest/portions/fordate' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    CustomController.forDate(data)
+end
