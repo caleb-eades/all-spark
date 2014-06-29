@@ -1,0 +1,8 @@
+{
+  "database": "all-spark",
+  "username": "be033620d2dd64",
+  "password": "91ba06a4",
+  "host": "us-cdbr-east-06.cleardb.net/heroku_342ee515a4ab100?reconnect=true",
+  "port": null,
+  "adapter": "mysql2"
+}
