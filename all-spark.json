@@ -17,11 +17,12 @@
             },
             {
                 "configName" : "all-spark-heroku",
-                "database"   : "all-spark",
-                "username"   : "be033620d2dd64",
-                "password"   : "91ba06a4",
-                "host"       : "us-cdbr-east-06.cleardb.net/heroku_342ee515a4ab100?reconnect=true",
-                "adapter"    : "mysql2"
+                "database"   : "df087iql8jo4ef",
+                "username"   : "chabzzehyndeiy",
+                "password"   : "vvI-8pg7n6RNUszKu0pZPXS8fY",
+                "host"       : "ec2-54-225-101-124.compute-1.amazonaws.com",
+                "port"       : "5432",
+                "adapter"    : "postgresql"
             }
         ],
         "views"     : [],
