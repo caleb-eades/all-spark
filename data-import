@@ -56,7 +56,7 @@ class DataImport
                 end
             end
         rescue
-            sleep(60)
+            system("./run")
             parseItem(name,hash,parentName,parentId)
         end
     end
