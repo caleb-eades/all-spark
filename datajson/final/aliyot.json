@@ -55,14 +55,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 1:1 - 6:8",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 1:1 - 6:8"
   },
   {
     "name": "Noach",
@@ -120,14 +115,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 6:9 - 11:32",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 6:9 - 11:32"
   },
   {
     "name": "Lech-Lecha",
@@ -185,14 +175,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 12:1 - 17:27",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 12:1 - 17:27"
   },
   {
     "name": "Vayera",
@@ -250,14 +235,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 18:1 - 22:24",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 18:1 - 22:24"
   },
   {
     "name": "Chayei Sara",
@@ -315,14 +295,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 23:1 - 25:18",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 23:1 - 25:18"
   },
   {
     "name": "Toldot",
@@ -380,14 +355,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 25:19 - 28:9",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 25:19 - 28:9"
   },
   {
     "name": "Vayetzei",
@@ -445,14 +415,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 28:10 - 32:3",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 28:10 - 32:3"
   },
   {
     "name": "Vayishlach",
@@ -510,14 +475,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 32:4 - 36:43",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 32:4 - 36:43"
   },
   {
     "name": "Vayeshev",
@@ -575,14 +535,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 37:1 - 40:23",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 37:1 - 40:23"
   },
   {
     "name": "Miketz",
@@ -640,14 +595,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 41:1 - 44:17",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 41:1 - 44:17"
   },
   {
     "name": "Vayigash",
@@ -705,14 +655,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 44:18 - 47:27",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 44:18 - 47:27"
   },
   {
     "name": "Vayechi",
@@ -770,14 +715,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 47:28 - 50:26",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 47:28 - 50:26"
   },
   {
     "name": "Shemot",
@@ -835,14 +775,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 1:1 - 6:1",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 1:1 - 6:1"
   },
   {
     "name": "Vaera",
@@ -900,14 +835,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 6:2 - 9:35",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 6:2 - 9:35"
   },
   {
     "name": "Bo",
@@ -965,14 +895,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 10:1 - 13:16",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 10:1 - 13:16"
   },
   {
     "name": "Beshalach",
@@ -1030,14 +955,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 13:17 - 17:16",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 13:17 - 17:16"
   },
   {
     "name": "Yitro",
@@ -1095,14 +1015,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 18:1 - 20:23",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 18:1 - 20:23"
   },
   {
     "name": "Mishpatim",
@@ -1160,14 +1075,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 21:1 - 24:18",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 21:1 - 24:18"
   },
   {
     "name": "Terumah",
@@ -1225,14 +1135,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 25:1 - 27:19",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 25:1 - 27:19"
   },
   {
     "name": "Tetzaveh",
@@ -1290,14 +1195,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 27:20 - 30:10",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 27:20 - 30:10"
   },
   {
     "name": "Ki Tisa",
@@ -1355,14 +1255,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 30:11 - 34:35",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 30:11 - 34:35"
   },
   {
     "name": "Vayakhel",
@@ -1420,14 +1315,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 35:1 - 38:20",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 35:1 - 38:20"
   },
   {
     "name": "Pekudei",
@@ -1485,14 +1375,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 38:21 - 40:38",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 38:21 - 40:38"
   },
   {
     "name": "Vayikra",
@@ -1550,14 +1435,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 1:1 - 5:26",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 1:1 - 5:26"
   },
   {
     "name": "Tzav",
@@ -1615,14 +1495,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 6:1 - 8:36",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 6:1 - 8:36"
   },
   {
     "name": "Shmini",
@@ -1680,14 +1555,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 9:1 - 11:47",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 9:1 - 11:47"
   },
   {
     "name": "Tazria",
@@ -1745,14 +1615,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 12:1 - 13:59",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 12:1 - 13:59"
   },
   {
     "name": "Metzora",
@@ -1810,14 +1675,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 14:1 - 15:33",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 14:1 - 15:33"
   },
   {
     "name": "Achrei Mot",
@@ -1875,14 +1735,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 16:1 - 18:30",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 16:1 - 18:30"
   },
   {
     "name": "Kedoshim",
@@ -1940,14 +1795,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 19:1 - 20:27",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 19:1 - 20:27"
   },
   {
     "name": "Emor",
@@ -2005,14 +1855,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 21:1 - 24:23",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 21:1 - 24:23"
   },
   {
     "name": "Behar",
@@ -2070,14 +1915,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 25:1 - 26:2",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 25:1 - 26:2"
   },
   {
     "name": "Bechukotai",
@@ -2135,14 +1975,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 26:3 - 27:34",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 26:3 - 27:34"
   },
   {
     "name": "Bamidbar",
@@ -2200,14 +2035,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 1:1 - 4:20",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 1:1 - 4:20"
   },
   {
     "name": "Nasso",
@@ -2265,14 +2095,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 4:21 - 7:89",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 4:21 - 7:89"
   },
   {
     "name": "Beha'alotcha",
@@ -2330,14 +2155,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 8:1 - 12:16",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 8:1 - 12:16"
   },
   {
     "name": "Sh'lach",
@@ -2395,14 +2215,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 13:1 - 15:41",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 13:1 - 15:41"
   },
   {
     "name": "Korach",
@@ -2460,14 +2275,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 16:1 - 18:32",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 16:1 - 18:32"
   },
   {
     "name": "Chukat",
@@ -2525,14 +2335,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 19:1 - 22:1",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 19:1 - 22:1"
   },
   {
     "name": "Balak",
@@ -2590,14 +2395,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 22:2 - 25:9",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 22:2 - 25:9"
   },
   {
     "name": "Pinchas",
@@ -2655,14 +2455,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 25:10 - 30:1",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 25:10 - 30:1"
   },
   {
     "name": "Matot",
@@ -2720,14 +2515,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 30:2 - 32:42",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 30:2 - 32:42"
   },
   {
     "name": "Masei",
@@ -2785,14 +2575,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 33:1 - 36:13",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 33:1 - 36:13"
   },
   {
     "name": "Devarim",
@@ -2850,14 +2635,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 1:1 - 3:22",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 1:1 - 3:22"
   },
   {
     "name": "Vaetchanan",
@@ -2915,14 +2695,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 3:23 - 7:11",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 3:23 - 7:11"
   },
   {
     "name": "Eikev",
@@ -2980,14 +2755,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 7:12 - 11:25",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 7:12 - 11:25"
   },
   {
     "name": "Re'eh",
@@ -3045,14 +2815,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 11:26 - 16:17",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 11:26 - 16:17"
   },
   {
     "name": "Shoftim",
@@ -3110,14 +2875,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 16:18 - 21:9",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 16:18 - 21:9"
   },
   {
     "name": "Ki Teitzei",
@@ -3175,14 +2935,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 21:10 - 25:19",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 21:10 - 25:19"
   },
   {
     "name": "Ki Tavo",
@@ -3240,14 +2995,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 26:1 - 29:8",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 26:1 - 29:8"
   },
   {
     "name": "Nitzavim",
@@ -3305,14 +3055,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 29:9 - 30:20",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 29:9 - 30:20"
   },
   {
     "name": "Vayeilech",
@@ -3370,14 +3115,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 31:1 - 31:30",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 31:1 - 31:30"
   },
   {
     "name": "Ha'Azinu",
@@ -3435,14 +3175,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 32:1 - 32:52",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 32:1 - 32:52"
   },
   {
     "name": "Simchat Torah",
@@ -3500,14 +3235,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 33:1 - 34:12; Genesis 1:1 - 2:3",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 33:1 - 34:12; Genesis 1:1 - 2:3"
   },
   {
     "name": "Vayakhel-Pekudei",
@@ -3565,14 +3295,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 35:1 - 40:38",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 35:1 - 40:38"
   },
   {
     "name": "Tazria-Metzora",
@@ -3630,14 +3355,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 12:1 - 15:33",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 12:1 - 15:33"
   },
   {
     "name": "Achrei Mot-Kedoshim",
@@ -3695,14 +3415,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 16:1 - 20:27",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 16:1 - 20:27"
   },
   {
     "name": "Behar-Bechukotai",
@@ -3760,14 +3475,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 25:1 - 27:34",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 25:1 - 27:34"
   },
   {
     "name": "Chukat-Balak",
@@ -3825,14 +3535,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 19:1 - 25:9",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 19:1 - 25:9"
   },
   {
     "name": "Matot-Masei",
@@ -3890,14 +3595,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Numbers 30:2 - 36:13",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Numbers 30:2 - 36:13"
   },
   {
     "name": "Nitzavim-Vayeilech",
@@ -3955,14 +3655,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 29:9 - 31:30",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 29:9 - 31:30"
   },
   {
     "name": "Rosh Hashana",
@@ -4008,14 +3703,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Genesis 21:1 - 21:34; Numbers 29:1 - 29:6",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Genesis 21:1 - 21:34; Numbers 29:1 - 29:6"
   },
   {
     "name": "Yom Kippur",
@@ -4073,14 +3763,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 16:1 - 16:34",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 16:1 - 16:34"
   },
   {
     "name": "Sukkot",
@@ -4126,14 +3811,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Leviticus 22:26 - 23:44; Numbers 29:12 - 29:16",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Leviticus 22:26 - 23:44; Numbers 29:12 - 29:16"
   },
   {
     "name": "Sukkot Shabbat Chol ha-Moed",
@@ -4191,14 +3871,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 33:12 - 34:26",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 33:12 - 34:26"
   },
   {
     "name": "Shmini Atzeret",
@@ -4244,14 +3919,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 14:22 - 16:17; Numbers 29:35 - 30:1",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 14:22 - 16:17; Numbers 29:35 - 30:1"
   },
   {
     "name": "Pesach",
@@ -4297,14 +3967,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 12:21 - 12:51; Numbers 28:16 - 28:25",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 12:21 - 12:51; Numbers 28:16 - 28:25"
   },
   {
     "name": "Pesach Shabbat Chol ha-Moed",
@@ -4362,14 +4027,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 33:12 - 34:26",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 33:12 - 34:26"
   },
   {
     "name": "Pesach VII",
@@ -4415,14 +4075,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 13:17 - 15:26; Numbers 28:19 - 28:25",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 13:17 - 15:26; Numbers 28:19 - 28:25"
   },
   {
     "name": "Pesach VIII",
@@ -4480,14 +4135,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 14:22 - 16:17",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 14:22 - 16:17"
   },
   {
     "name": "Shavuot",
@@ -4533,14 +4183,9 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Exodus 19:1 - 20:23; Numbers 28:26 - 28:31",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Exodus 19:1 - 20:23; Numbers 28:26 - 28:31"
   },
   {
     "name": "Shavuot II",
@@ -4598,13 +4243,8 @@
         "verses": [
 
         ]
-      },
-      {
-        "range": "Deuteronomy 14:22 - 16:17",
-        "verses": [
-
-        ]
       }
-    ]
+    ],
+    "range": "Deuteronomy 14:22 - 16:17"
   }
 ]
