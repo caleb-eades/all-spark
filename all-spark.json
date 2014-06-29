@@ -23,6 +23,29 @@
                 "connections": [
                     {
                         "type": "has_many",
+                        "name": "reading"
+                    }
+                ],
+                "members": [
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "range",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "name": "Reading",
+                "connections": [
+                    {
+                        "type": "belongs_to",
+                        "name": "portion"
+                    },
+                    {
+                        "type": "has_many",
                         "name": "verse"
                     }
                 ],
@@ -38,13 +61,25 @@
                 "connections": [
                     {
                         "type": "belongs_to",
-                        "name": "portion"
+                        "name": "reading"
                     }
                 ],
                 "members": [
                     {
+                        "name": "book",
+                        "type": "string"
+                    },
+                    {
+                        "name": "chapter",
+                        "type": "string"
+                    },
+                    {
                         "name": "verse",
                         "type": "string"
+                    },
+                    {
+                        "name": "text",
+                        "type": "text"
                     }
                 ]
             }

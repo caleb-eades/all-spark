@@ -1,0 +1,101 @@
+#!/usr/local/bin/ruby
+require 'rubygems'
+require 'json'
+require 'active_record'
+
+class DataImport
+
+    def initialize(host, dataFile)
+        @host     = host
+        @dataFile = dataFile
+
+        doAction()
+    end
+
+    def doAction()
+        jsonData = File.read(@dataFile)
+        hash = JSON.parse(jsonData)
+        
+        hash.each do |key,array|
+            parentId = 0;
+            parentName = '';
+            subItem(key,array,parentName,parentId)
+        end
+    end
+
+    def parseItem (name,hash,parentName,parentId)
+        # create json
+        json = '{'
+        hash.each do |key,item|
+            if(item.kind_of?(String))
+                json += '"' + key + '":"' + item + '",'
+            end
+        end
+        unless(parentId == 0)
+            json += '"' + parentName + '_id":"' + parentId.to_s + '",'
+        end
+        json.chop!
+        json += '}'
+
+        puts "Sending JSON: #{json}"
+        json.gsub!("'","\\u0027")
+    
+        # run the request
+        returnJson = `curl -X POST --data '#{json}' http://#{@host}/rest/model/#{name}/create --header 'Content-Type:application/json'`
+        puts "Return JSON: #{returnJson}"
+        begin
+            newItem = JSON.parse(returnJson)
+            parentId = newItem['id']
+            parentName = name
+        
+            # handle children
+            hash.each do |key,item|
+                if(item.kind_of?(Array))
+                    parentName = ActiveSupport::Inflector.singularize(parentName)
+                    subItem(key,item,parentName,parentId)
+                end
+            end
+        rescue
+            sleep(60)
+            parseItem(name,hash,parentName,parentId)
+        end
+    end
+
+    def subItem (name,array,parentName,parentId)
+        array.each do |item|
+            if(item.kind_of?(Hash))
+                parseItem(name,item,parentName,parentId);
+            end
+        end
+    end
+    
+end                                                
+
+host     = ""
+dataFile = ""
+if(ARGV.length > 0)
+    if(ARGV.length < 2)
+        puts ""
+        puts "Usage: #{$0} <host> <file>"
+        puts ""
+        puts "Examples:"
+        puts ""
+        puts "  Local:"
+        puts "  #{$0} localhost:4567 data.json"
+        puts ""
+        exit
+    else
+        host     = ARGV[0]
+        dataFile = ARGV[1]
+    end
+else
+    host = 'localhost:4567'
+    dataFile = 'data.json'
+end
+
+
+puts "Host: #{host}"
+puts "fileName: #{dataFile}"
+
+dataImport = DataImport.new(host, dataFile)
+

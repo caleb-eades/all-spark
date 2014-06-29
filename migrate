@@ -19,6 +19,7 @@ class Migrate
     def create()
         begin
             ActiveRecord::Migration.create_table :portions do |table|
+                table.string :name
                 table.string :range
             end
             puts 'portions : Created'
@@ -31,9 +32,26 @@ class Migrate
         end
 
         begin
-            ActiveRecord::Migration.create_table :verses do |table|
+            ActiveRecord::Migration.create_table :readings do |table|
                 table.belongs_to :portion
+                table.string :range
+            end
+            puts 'readings : Created'
+        rescue => exception
+            if(exception.inspect =~ /already exists/)
+                puts 'readings : already exists'
+            else
+                puts 'readings :' + exception.inspect
+            end
+        end
+
+        begin
+            ActiveRecord::Migration.create_table :verses do |table|
+                table.belongs_to :reading
+                table.string :book
+                table.string :chapter
                 table.string :verse
+                table.text :text
             end
             puts 'verses : Created'
         rescue => exception
@@ -55,6 +73,17 @@ class Migrate
                 puts 'portions : does not exist'
             else
                 puts 'portions :' + exception.inspect
+            end
+        end
+
+        begin
+            ActiveRecord::Migration.drop_table :readings
+            puts 'readings : Deleted'
+        rescue => exception
+            if(exception.inspect =~ /Unknown table/)
+                puts 'readings : does not exist'
+            else
+                puts 'readings :' + exception.inspect
             end
         end
 

@@ -70,6 +70,48 @@ post '/rest/model/portions/filter' do
     PortionController.filter(data)
 end
 
+post '/rest/model/readings/create' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    ReadingController.create(data)
+end
+
+post '/rest/model/readings/read' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    ReadingController.read(data)
+end
+
+post '/rest/model/readings/update' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    ReadingController.update(data)
+end
+
+post '/rest/model/readings/delete' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    ReadingController.delete(data)
+end
+
+post '/rest/model/readings/list' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    ReadingController.list(data)
+end
+
+post '/rest/model/readings/filter' do
+    request.body.rewind
+    data = JSON.parse request.body.read
+    content_type :json
+    ReadingController.filter(data)
+end
+
 post '/rest/model/verses/create' do
     request.body.rewind
     data = JSON.parse request.body.read
