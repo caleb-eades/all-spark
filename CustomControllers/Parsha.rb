@@ -142,8 +142,3 @@ class Parsha
 
     end
 end
-
-ARGV.each do |arg|
-    parsha = Parsha.new(arg)
-    puts parsha.getParsha
-end
