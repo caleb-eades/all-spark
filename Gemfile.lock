@@ -60,6 +60,7 @@ GEM
     dm-validations (1.2.0)
       dm-core (~> 1.2.0)
     fastercsv (1.5.5)
+    hebruby (2.0.4)
     i18n (0.6.9)
     json (1.8.1)
     json_pure (1.8.1)
@@ -95,6 +96,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   data_mapper
+  hebruby
   json
   mysql2
   sinatra
