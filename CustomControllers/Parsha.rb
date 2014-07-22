@@ -65,7 +65,7 @@ class Parsha
             end
         end
         # Calculate weeks from days
-        @weekOfCycle = (days - (days % 7)) / 7
+        @weekOfCycle = ((days - (days % 7)) / 7) + 1
         aliyah = @jul.wday
         aliyah += 1
         @parshaInfo = {"portion" => @weekOfCycle, "aliyah" => aliyah}
@@ -75,10 +75,8 @@ class Parsha
         @hebrewSA = Hebruby::HebrewDate.new(@cycleStartDay,7,@cycleYear)
         @julianSA = Date.jd(@hebrewSA.jd)
 
-        if (@julianSA.saturday?)
-            @cycleStartDay = 23
-        else
-            @cycleStartDay = 23 - (7 - @julianSA.wday)
+        if (!@julianSA.saturday?)
+            @cycleStartDay = @cycleStartDay + (6 - @julianSA.wday)
         end
     end
 
