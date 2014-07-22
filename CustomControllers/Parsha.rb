@@ -10,57 +10,76 @@ class Parsha
             @dates = []
             @jul = Date.strptime(date,'%Y-%m-%d')
             @heb = Hebruby::HebrewDate.new(Date.new(@jul.year, @jul.month, @jul.day))
-            getParsha
-            return @parshaInfo
+            #getParsha
         rescue
             json = {"code" => 400, "message" => "Invalid Request", "reason" => "Invalid Date : #{date}. Must be in format '%Y-%m-%d'"}
-            return json.to_json
+            return json
         end
+        setParshaInfo
+        return @parshaInfo
     end
 
-    def getParsha
+    def setParshaInfo
+        @beforeSA = false
         @cycleYear = @heb.year
-        @cycleStartDay = nil
-        @lastWeeks = false
+        @cycleStartDay = 22
+    
+        # Set the date of Shemeni Atzeret
+        setSA
 
-        shemeniAtzeret = Hebruby::HebrewDate.new(22,1,@heb.year)
-        julian = Date.jd(shemeniAtzeret.jd)
-        if (julian.saturday?)
-            @cycleStartDay = 23;
-        else
-            @cycleStartDay = (22 - julian.wday)
-        end
-
-        if (shemeniAtzeret.day < @cycleStartDay)
+        # If it is before Shemeni Atzeret, use previous year
+        if (@heb.month < 7 || (@heb.month == 7 && @heb.day < @cycleStartDay))
             @cycleYear = @cycleYear - 1;
-            @lastWeeks = true
+            @beforeSA = true
+            setSA
         end
-        setImportantDates
-        setPortionNumber
-    end
 
-    def setPortionNumber
-        days = Hebruby::HebrewDate.month_days(@heb.year,1) - @cycleStartDay
-        if (@heb.month > 1)
-            (2..@heb.month).each do |month|
-                days = days + Hebruby::HebrewDate.month_days(@heb.year,month) 
+        # Figure out How many weeks into the cycle we are
+        days = 0
+        if (@beforeSA)
+            days += @heb.day
+            # All days in previous year since SA
+            days = days + Hebruby::HebrewDate.month_days(@hebrewSA.year, @hebrewSA.month)
+            days = days - @hebrewSA.day
+            (8..Hebruby::HebrewDate.year_months(@cycleYear)).each do |month|
+                days = days + Hebruby::HebrewDate.month_days(@heb.year,month)
+            end
+            # All days in Year to date
+            if (@heb.month != 1)
+                (1..@heb.month - 1).each do |month|
+                    days = days + Hebruby::HebrewDate.month_days(@heb.year,month)
+                end
+            end
+        else
+            # Days of current Month + days after SA in Tishrei
+            days = days + @heb.day
+            days = days - @hebrewSA.day
+            if (@heb.month > 7)
+                days = days + Hebruby::HebrewDate.month_days(@hebrewSA.year, @hebrewSA.month)
+            end
+            # All the months in between
+            if (@heb.month != 8)
+                (8..@heb.month - 1).each do |month|
+                    days = days + Hebruby::HebrewDate.month_days(@heb.year,month)
+                end
             end
         end
-        @weekOfYear = (days - (days % 7)) / 7
-        
-        @portionNumber = @weekOfYear - @offsetWeeks
-
-        if (@lastWeeks)
-            @portionNumber = (@weeksInYear - @offsetWeeks) + @weekOfYear 
-        end
-
-        if (@portionNumber < 0)
-            @portionNumber = 0;
-        end
-        
+        # Calculate weeks from days
+        @weekOfCycle = (days - (days % 7)) / 7
         aliyah = @jul.wday
         aliyah += 1
-        @parshaInfo = {"portion" => @portionNumber, "aliyah" => aliyah}
+        @parshaInfo = {"portion" => @weekOfCycle, "aliyah" => aliyah}
+    end
+
+    def setSA
+        @hebrewSA = Hebruby::HebrewDate.new(@cycleStartDay,7,@cycleYear)
+        @julianSA = Date.jd(@hebrewSA.jd)
+
+        if (@julianSA.saturday?)
+            @cycleStartDay = 23
+        else
+            @cycleStartDay = 23 - (7 - @julianSA.wday)
+        end
     end
 
     def setImportantDates
