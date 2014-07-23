@@ -10,6 +10,8 @@ class Parsha
             @dates = []
             @jul = Date.strptime(date,'%Y-%m-%d')
             @heb = Hebruby::HebrewDate.new(Date.new(@jul.year, @jul.month, @jul.day))
+            puts "Hebrew Month : #{@heb.month}, Day : #{@heb.day}, Year : #{@heb.year}"
+            puts "Julian Month : #{@jul.month}, Day : #{@jul.day}, Year : #{@jul.year}"
             #getParsha
         rescue
             json = {"code" => 400, "message" => "Invalid Request", "reason" => "Invalid Date : #{date}. Must be in format '%Y-%m-%d'"}
@@ -28,13 +30,18 @@ class Parsha
         setSA
 
         # If it is before Shemeni Atzeret, use previous year
-        if (@heb.month < 7 || (@heb.month == 7 && @heb.day < @cycleStartDay))
+        if (@heb.month < 7) 
+            @cycleYear = @cycleYear - 1;
+            @beforeSA = true
+            setSA
+        elsif (@heb.month == 7 && @heb.day < @hebrewSA.day)
             @cycleYear = @cycleYear - 1;
             @beforeSA = true
             setSA
         end
 
         # Figure out How many weeks into the cycle we are
+        puts "Month : #{@heb.month} beforeSA? : #{@beforeSA}"
         days = 0
         if (@beforeSA)
             days += @heb.day
@@ -58,7 +65,7 @@ class Parsha
                 days = days + Hebruby::HebrewDate.month_days(@hebrewSA.year, @hebrewSA.month)
             end
             # All the months in between
-            if (@heb.month != 8)
+            if (@heb.month > 8)
                 (8..@heb.month - 1).each do |month|
                     days = days + Hebruby::HebrewDate.month_days(@heb.year,month)
                 end
