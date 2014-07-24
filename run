@@ -24,3 +24,4 @@ command = "/usr/local/bin/puma -C ./config/puma.config"
 puts("Starting solution: #{command}")
 system(command)
 
+system('tail -f puma.stdout.log')

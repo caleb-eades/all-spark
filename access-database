@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+contents = File.read(ARGV.shift)
+config = JSON.parse(contents)
+cmd = ""
+case config["adapter"]
+    when 'mysql2'
+        cmd = "mysql --host=#{config['host']} --port=#{config['port']} --user=#{config['username']} --password=#{config['password']} --database=#{config['database']}"
+end
+puts cmd
+system cmd
