@@ -19,14 +19,14 @@ class Parsha
             @targetHebrew = Hebruby::HebrewDate.new(@targetShabbat)
             @inIsrael = false
             findSimchatTorah
-            findYomTovim
             findParshaNumber
+            return {"portion" => @parshaNumber}
         rescue Exception => e  
             puts e.message  
             puts e.backtrace.inspect
             json = {"code" => 400, "message" => "Invalid Request", "detail" => "Invalid Date : #{date}. Must be in format '%Y-%m-%d'"}
+            return json
         end
-        return {}
     end
 
     def findSimchatTorah
@@ -47,31 +47,74 @@ class Parsha
     end
 
     def findParshaNumber
-        @parshaNumber = (@targetShabbat - @workingShabbat)/7
+        @parshaNumber = ((@targetShabbat.jd - @workingShabbat.jd)/7)+1
         unless (@parshaNumber < 22)
             @parshaNumber = 21
             @workingShabbat = @workingShabbat + 147
             isLeapYear = Hebruby::HebrewDate.leap?(@simchatTorah.year)
             passoverStart = Hebruby::HebrewDate.new(15,1,@targetHebrew.year)
-            if (passoverStart.jd > @targetShabbat.jd)
-                passoverStart = Hebruby::HebrewDate.new(15,1,@targetHebrew.year + 1)
-            end
             while (@workingShabbat.jd <= @targetShabbat.jd)
                 combined = false
-                # Iterate
                 @workingShabbat = @workingShabbat + 7
+                @parshaNumber = @parshaNumber + 1
+                puts @parshaNumber
+                case @parshaNumber
+                    when 22
+                        dayBeforePassover = passoverStart.jd - 1
+                        days = dayBeforePassover - @workingShabbat.jd
+                        weeks = (days - (days%7))/7
+                        puts "days:#{days},weeks:#{weeks}"
+                        if (weeks < 4)
+                            combined = true
+                        end
+                    when 27,29
+                        unless (isLeapYear)
+                            combined = true
+                        end
+                    when 32
+                        if (@inIsrael)
+                            unless (isLeapYear)
+                                date = Date.jd(passoverStart.jd)
+                                if (!date.saturday?)
+                                    combined = true
+                                end
+                            end
+                        else
+                            unless (isLeapYear)
+                                combined = true
+                            end
+                        end
+                    when 39
+                        unless (@inIsrael)
+                            date = Date.jd(passoverStart.jd)
+                            if (date.thursday?)
+                                combined = true
+                            end
+                        end
+                    when 42
+                        tishaBAv = Hebruby::HebrewDate.new(9,5,@workingShabbat.year)
+                        days = tishaBAv.jd - @workingShabbat.jd
+                        weeks = (days - (days%7))/7
+                        if (weeks < 3)
+                            combined = true
+                        end
+                    when 51
+                        roshHashana = Hebruby::HebrewDate.new(1,1,@workingShabbat.year + 1)
+                        days = roshHashana.jd - @workingShabbat.jd
+                        if (days > 3)
+                            combine = true
+                        end
+                end
                 if(combined)
-                    @parshaNumber = @parshaNumber + 2
-                else
                     @parshaNumber = @parshaNumber + 1
                 end
             end
-            puts "PARSHA NUMBER = #{@parshaNumber}"
+            if (combined)
+                puts "PARSHA NUMBER = #{@parshaNumber}-#{@parshaNumber + 1}"
+            else
+                puts "PARSHA NUMBER = #{@parshaNumber}"
+            end
         end
-    end
-
-    def findYomTovim
-
     end
 
 end

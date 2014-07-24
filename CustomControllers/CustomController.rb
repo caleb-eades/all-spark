@@ -21,12 +21,11 @@ class CustomController
         if (parshaInfo.has_key?("code"))
             return parshaInfo.to_json
         end
-        #portion = Portion.find(parshaInfo['portion'])
+        portion = Portion.find(parshaInfo['portion'])
 
-        #portionJson = { :id => portion.id, :name => portion.name, :range => portion.range, :reading => ReadingController.recurse(portion.id, Hash.new) }
+        portionJson = { :id => portion.id, :name => portion.name, :range => portion.range, :reading => ReadingController.recurse(portion.id, Hash.new) }
 
-        #return portionJson.to_json
-        return "YAY"
+        return portionJson.to_json
     end
 end
 
