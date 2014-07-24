@@ -3,3 +3,4 @@
 raptor all-spark.json
 git checkout config.ru
 git checkout Gemfile
+git checkout run
