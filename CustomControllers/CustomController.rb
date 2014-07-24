@@ -15,17 +15,24 @@ class CustomController
     end
 
     def self.forDate(data)
+        portionArray = []
 
         parshaInfo = Parsha.new().getParsha(data['date'])
 
         if (parshaInfo.has_key?("code"))
             return parshaInfo.to_json
+        else
+            portion = Portion.find(parshaInfo['portion'])
+            portionJson = { :id => portion.id, :name => portion.name, :range => portion.range, :reading => ReadingController.recurse(portion.id, Hash.new) }
+            portionArray.push(portionJson)
+    
+            if (parshaInfo['combined'])
+                portion = Portion.find(parshaInfo['portion'] + 1)
+                portionJson = { :id => portion.id, :name => portion.name, :range => portion.range, :reading => ReadingController.recurse(portion.id, Hash.new) }
+                portionArray.push(portionJson)
+            end
+            return portionArray.to_json
         end
-        portion = Portion.find(parshaInfo['portion'])
-
-        portionJson = { :id => portion.id, :name => portion.name, :range => portion.range, :reading => ReadingController.recurse(portion.id, Hash.new) }
-
-        return portionJson.to_json
     end
 end
 

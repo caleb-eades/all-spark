@@ -11,6 +11,7 @@ class Parsha
     attr_accessor :workingShabbat # Date
     attr_accessor :inIsrael       # Boolean
     attr_accessor :parshaNumber   # Integer
+    attr_accessor :combined       # Boolean
 
     def getParsha(date)
         begin
@@ -20,7 +21,7 @@ class Parsha
             @inIsrael = false
             findSimchatTorah
             findParshaNumber
-            return {"portion" => @parshaNumber}
+            return {"portion" => @parshaNumber, "combined" => @combined}
         rescue Exception => e  
             puts e.message  
             puts e.backtrace.inspect
@@ -57,13 +58,11 @@ class Parsha
                 combined = false
                 @workingShabbat = @workingShabbat + 7
                 @parshaNumber = @parshaNumber + 1
-                puts @parshaNumber
                 case @parshaNumber
                     when 22
                         dayBeforePassover = passoverStart.jd - 1
                         days = dayBeforePassover - @workingShabbat.jd
                         weeks = (days - (days%7))/7
-                        puts "days:#{days},weeks:#{weeks}"
                         if (weeks < 4)
                             combined = true
                         end
@@ -105,8 +104,10 @@ class Parsha
                             combine = true
                         end
                 end
-                if(combined)
-                    @parshaNumber = @parshaNumber + 1
+                unless (@workingShabbat.jd >= @targetShabbat.jd)
+                    if(combined)
+                        @parshaNumber = @parshaNumber + 1
+                    end
                 end
             end
             if (@parshaNumber > 54)
@@ -119,6 +120,7 @@ class Parsha
             else
                 puts "PARSHA NUMBER = #{@parshaNumber}"
             end
+            @combined = combined
         end
     end
 
