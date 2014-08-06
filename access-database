@@ -7,7 +7,12 @@ config = JSON.parse(contents)
 cmd = ""
 case config["adapter"]
     when 'mysql2'
-        cmd = "mysql --host=#{config['host']} --port=#{config['port']} --user=#{config['username']} --password=#{config['password']} --database=#{config['database']}"
+        cmd = "mysql "
+        cmd += "--host=#{config['host']} "
+        cmd += "--port=#{config['port']} "
+        cmd += "--user=#{config['username']} "
+        cmd += "--password=#{config['password']} "
+        cmd += "--database=#{config['database']}"
 end
 puts cmd
 system cmd
