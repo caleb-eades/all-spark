@@ -49,6 +49,7 @@ class Parsha
 
     def findParshaNumber
         @parshaNumber = ((@targetShabbat.jd - @workingShabbat.jd)/7)+1
+        customParsha = nil
         unless (@parshaNumber < 22)
             @parshaNumber = 21
             @workingShabbat = @workingShabbat + 147
@@ -65,10 +66,17 @@ class Parsha
                         weeks = (days - (days%7))/7
                         if (weeks < 4)
                             combined = true
+                            customParsha = 55
                         end
-                    when 27,29
+                    when 27
                         unless (isLeapYear)
                             combined = true
+                            customParsha = 56
+                        end
+                    when 29
+                        unless (isLeapYear)
+                            combined = true
+                            customParsha = 57
                         end
                     when 32
                         if (@inIsrael)
@@ -76,11 +84,13 @@ class Parsha
                                 date = Date.jd(passoverStart.jd)
                                 if (!date.saturday?)
                                     combined = true
+                                    customParsha = 58
                                 end
                             end
                         else
                             unless (isLeapYear)
                                 combined = true
+                                customParsha = 58
                             end
                         end
                     when 39
@@ -88,6 +98,7 @@ class Parsha
                             date = Date.jd(passoverStart.jd)
                             if (date.thursday?)
                                 combined = true
+                                customParsha = 59
                             end
                         end
                     when 42
@@ -96,12 +107,14 @@ class Parsha
                         weeks = (days - (days%7))/7
                         if (weeks < 3)
                             combined = true
+                            customParsha = 60
                         end
                     when 51
                         roshHashana = Hebruby::HebrewDate.new(1,1,@workingShabbat.year + 1)
                         days = roshHashana.jd - @workingShabbat.jd
                         if (days > 3)
                             combine = true
+                            customParsha = 61
                         end
                 end
                 unless (@workingShabbat.jd >= @targetShabbat.jd)
@@ -119,6 +132,7 @@ class Parsha
         end
         if (combined)
             puts "PARSHA NUMBER = #{@parshaNumber}-#{@parshaNumber + 1}"
+            @parshaNumber = customParsha
         else
             puts "PARSHA NUMBER = #{@parshaNumber}"
         end
