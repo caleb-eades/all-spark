@@ -17,7 +17,7 @@
             },
             {
                 "configName" : "all-spark-aws",
-                "database"   : "allspark",
+                "database"   : "all-spark",
                 "username"   : "root",
                 "password"   : "jetstream",
                 "host"       : "dailyaliyah.ccxx3nivhm3v.us-west-2.rds.amazonaws.com",
