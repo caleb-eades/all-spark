@@ -1,8 +1,0 @@
-{
-  "database": "df087iql8jo4ef",
-  "username": "chabzzehyndeiy",
-  "password": "vvI-8pg7n6RNUszKu0pZPXS8fY",
-  "host": "ec2-54-225-101-124.compute-1.amazonaws.com",
-  "port": "5432",
-  "adapter": "postgresql"
-}

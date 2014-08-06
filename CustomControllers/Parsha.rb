@@ -110,17 +110,17 @@ class Parsha
                     end
                 end
             end
-            if (@parshaNumber > 54)
-                @parshaNumber = 54
-            elsif (@parshaNumber < 1)
-                @parshaNumber = 1
-            end
-            if (combined)
-                puts "PARSHA NUMBER = #{@parshaNumber}-#{@parshaNumber + 1}"
-            else
-                puts "PARSHA NUMBER = #{@parshaNumber}"
-            end
             @combined = combined
+        end
+        if (@parshaNumber > 54)
+            @parshaNumber = 54
+        elsif (@parshaNumber < 1)
+            @parshaNumber = 1
+        end
+        if (combined)
+            puts "PARSHA NUMBER = #{@parshaNumber}-#{@parshaNumber + 1}"
+        else
+            puts "PARSHA NUMBER = #{@parshaNumber}"
         end
     end
 
