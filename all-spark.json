@@ -7,21 +7,21 @@
         "location"  : "dev/personal",
         "databases" : [
             {
-                "configName" : "all-spark-local",
-                "database"   : "all-spark",
-                "username"   : "root",
-                "password"   : "jetstream",
-                "host"       : "127.0.0.1",
-                "port"       : "3307",
-                "adapter"    : "mysql2"
-            },
-            {
                 "configName" : "all-spark-aws",
                 "database"   : "all-spark",
                 "username"   : "root",
                 "password"   : "jetstream",
                 "host"       : "dailyaliyah.ccxx3nivhm3v.us-west-2.rds.amazonaws.com",
                 "port"       : "3306",
+                "adapter"    : "mysql2"
+            },
+            {
+                "configName" : "all-spark-local",
+                "database"   : "all-spark",
+                "username"   : "root",
+                "password"   : "jetstream",
+                "host"       : "127.0.0.1",
+                "port"       : "3307",
                 "adapter"    : "mysql2"
             }
         ],

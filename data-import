@@ -38,26 +38,22 @@ class DataImport
         json += '}'
 
         puts "Sending JSON: #{json}"
-        json.gsub!("'","\\u0027")
     
         # run the request
-        returnJson = `curl -X POST --data '#{json}' http://#{@host}/rest/model/#{name}/create --header 'Content-Type:application/json'`
+        curlCommand = "curl -X POST --data '#{json}' http://#{@host}/rest/model/#{name}/create --header 'Content-Type:application/json'"
+        puts(curlCommand)
+        returnJson = `#{curlCommand}`
         puts "Return JSON: #{returnJson}"
-        begin
-            newItem = JSON.parse(returnJson)
-            parentId = newItem['id']
-            parentName = name
-        
-            # handle children
-            hash.each do |key,item|
-                if(item.kind_of?(Array))
-                    parentName = ActiveSupport::Inflector.singularize(parentName)
-                    subItem(key,item,parentName,parentId)
-                end
+        newItem = JSON.parse(returnJson)
+        parentId = newItem['id']
+        parentName = name
+    
+        # handle children
+        hash.each do |key,item|
+            if(item.kind_of?(Array))
+                parentName = ActiveSupport::Inflector.singularize(parentName)
+                subItem(key,item,parentName,parentId)
             end
-        rescue
-            system("./run")
-            parseItem(name,hash,parentName,parentId)
         end
     end
 
